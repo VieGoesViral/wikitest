@@ -1,0 +1,315 @@
+/* === LOOTIFY CSS: GOLD | BLACK | WHITE THEME === */
+
+/* Font & Role Colors */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+@import url('/w/index.php?title=MediaWiki:RoleColors.css&action=raw&ctype=text/css');
+
+:root {
+  --gold: #FFD700;
+  --gold-soft: rgba(255, 215, 0, 0.1);
+  --black: #000;
+  --white: #fff;
+  --gray: #1a1a1a;
+  --text: #f8f8f8;
+  --text-soft: #dcdcdc;
+  --border: rgba(255, 215, 0, 0.3);
+  --shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Background + Body */
+body {
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 10, 30, 0.85)),
+    url("https://static.wikitide.net/lootifywiki/0/0f/GhostShip1.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+#mw-wrapper,
+.mw-body,
+#mw-content,
+#content,
+#mw-content-text,
+#mw-header-container,
+#mw-content-container,
+#mw-footer-container {
+  background: transparent !important;
+}
+
+#mw-wrapper,
+.mw-body,
+#mw-content,
+#content,
+#mw-content-text,
+#mw-header-container,
+#mw-content-container,
+#mw-footer-container {
+  background: transparent !important;
+}
+
+
+/* Page Heading on Main Page */
+.page-Main_Page #firstHeading {
+  display: none;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.2em;
+}
+
+/* Glowing gold text */
+.glow {
+  color: var(--gold);
+  text-shadow: 0 0 5px var(--gold), 0 0 10px var(--gold);
+}
+
+/* Links */
+a, a:visited {
+  color: var(--gold);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: var(--white);
+  text-shadow: 0 0 4px var(--gold);
+}
+
+/* Infobox */
+.infobox {
+  float: right;
+  clear: right;
+  width: 300px;
+  background: var(--gray);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 12px;
+  color: var(--text);
+}
+
+.infobox img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--gold);
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .infobox {
+    width: 100%;
+    float: none;
+    margin: 1em 0;
+  }
+}
+
+/* Tabber UI */
+.tabber__tabs {
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.tabber__tab {
+  color: var(--text-soft);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 10px;
+}
+
+.tabber__tab:hover {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.tabber__section {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Frames */
+.frame, .frame-noborder {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 15px;
+  margin: 1.5em 0;
+}
+
+.frame .heading, .frame-noborder .heading {
+  text-align: center;
+  font-weight: bold;
+  color: var(--gold);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Message Boxes */
+.mbox {
+  background: var(--gold-soft);
+  border-left: 5px solid var(--gold);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.mbox__content__header {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+/* Tooltip Text */
+.text-tooltip {
+  border-bottom: 1px dotted var(--gold);
+  cursor: help;
+}
+
+/* Template:Item styling */
+.item {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 4px 8px;
+  gap: 5px;
+  color: var(--gold);
+}
+
+.item-icon img {
+  filter: drop-shadow(0 0 2px var(--gold));
+}
+
+/* References highlight */
+.mw-parser-output ol.references li:target,
+.mw-parser-output sup.reference:target {
+  background-color: var(--gold-soft);
+  border-left: 3px solid var(--gold);
+}
+
+/* Discord Widget */
+#discord-widget {
+  max-width: 250px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Dim image overlay */
+.dim-plus-background {
+  filter: brightness(50%);
+}
+
+/* Notices */
+.usermessage {
+  background: var(--gold-soft);
+  border: 1px solid var(--gold);
+  color: var(--black);
+}
+
+.usermessage a {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.lowopacity {
+  opacity: 0.5;
+}
+
+.lowopacity2 {
+  opacity: 0.25;
+}
+
+.badge > div {
+  margin-left: 0.6em;
+}
+
+/* Warning / Error Messages */
+.cdx-message--warning {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.cdx-message--error {
+  background: rgba(255, 60, 60, 0.15);
+  border-color: red;
+  color: #f99;
+}
+
+/* Navigation link tweaks */
+li#pt-userpage a {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+li#pt-userpage a:hover {
+  color: var(--white);
+  text-shadow: 0 0 3px var(--gold);
+}
+
+
+.frame, .frame-noborder,
+.tabber__section,
+.countdown-container,
+.vectorTabs, .vectorMenu,
+.ts-inner, .ts-outer,
+.mw-portlet, .mw-portlet-body,
+.portlet,
+#mw-panel,
+.navbox,
+.suggestions {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.1);
+}
+
+
+.frame, .frame-noborder {
+  border: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+
+.mw-body,
+.mw-body-content,
+#content,
+#mw-content-text,
+#mw-wrapper,
+.ts-inner,
+#mw-head-base,
+#mw-page-base,
+#footer {
+  background: transparent !important;
+}
+
+
+.mw-portlet-tabs li, .vectorTabs li {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-radius: 6px;
+  margin: 0 2px;
+}
+
+.vectorTabs li a, .vectorMenu li a {
+  color: var(--gold);
+}
+
+.vectorTabs li.selected a {
+  background: rgba(0, 255, 150, 0.15);
+  color: #fff;
+}
+
+/* :sparkles: Animation subtile au survol */
+.mw-portlet:hover,
+.ts-nav:hover {
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.15);
+  background-color: rgba(0, 0, 0, 0.55) !important;
+}
