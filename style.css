@@ -1,0 +1,82 @@
+.NavBox {
+    position: relative;
+    display: inline-flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Center items horizontally */
+    height: 50px; /* Rectangular height */
+    width: 180px; /* Example width, adjust as needed */
+    z-index: 0;
+    border-radius: 4px;
+    margin: 5px; /* Margin around each box */
+    background-color: #2b6cb0; /* Example background color (blue/teal from your image) */
+    text-decoration: none; /* Remove underline from the anchor */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Ensure content stays within bounds */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 0 10px; /* Padding inside the box */
+}
+
+.NavBox:hover {
+    background-color: #3182ce; /* Darker blue/teal on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* This class will now be for the icon container */
+.NavBoxImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-right: 8px; /* Add margin to the right of the image for spacing between text and icon */
+    
+    /* Removed absolute positioning to allow normal flex flow */
+    position: static;
+    
+    height: auto !important; /* Let content define height */
+    width: auto !important; /* Let content define width */
+    opacity: 1;
+    filter: none;
+    z-index: auto; /* Reset z-index */
+}
+
+.NavBoxImage img {
+    width: 32px; /* Smaller icon size as per image */
+    height: 32px; /* Smaller icon size as per image */
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes icons white, as requested */
+    transition: filter 0.3s;
+}
+
+.NavBox:hover .NavBoxImage img {
+    filter: brightness(0) invert(1) opacity(0.8); /* Slightly dim icon on hover */
+}
+
+/* This class will now be for the text container */
+.NavBoxLink {
+    flex-shrink: 0; /* Prevent text from shrinking */
+    text-align: center; /* Center align text */
+    color: #e2e8f0; /* Light text color */
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+    transition: color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    /* Ensure no absolute positioning here */
+    position: static;
+    bottom: auto;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.NavBoxLink a {
+    color: inherit; /* Inherit color from parent .NavBoxLink */
+    text-decoration: none;
+    transition: inherit; /* Inherit transition from parent */
+}
+
+.NavBox:hover .NavBoxLink {
+    color: #93c5fd; /* Lighter blue text on hover, matching image */
+}
